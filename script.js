@@ -344,6 +344,7 @@ if (continueInstructionsButton) {
   continueInstructionsButton.addEventListener('click', () => {
     document.getElementById('instructions-dialog').style.display = 'none';
     document.getElementById('code-dialog').style.display = 'block';
+    playBackgroundMusic();
   });
 }
 });
