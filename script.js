@@ -77,6 +77,16 @@ function playBackgroundMusic() {
   }
 }
 
+function startOrContinueGame() {
+  if (document.getElementById('game-over-image').style.display === 'block') {
+    hideGameOver();
+    startGame(); // Cambiar endGame(); por startGame();
+  } else if (!isSpacePressed) {
+    continueGame();
+  }
+}
+
+
 async function startGame() {
   if (!isMusicPlaying) {
     playBackgroundMusic();
