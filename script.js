@@ -92,6 +92,7 @@ async function startGame() {
 function endGame() {
   document.getElementById('game').style.display = 'none';
   document.getElementById('game-over-image').style.display = 'block';
+  stopBackgroundMusic();
   score = 0;
   updateScore();
   mistakes = 0;
