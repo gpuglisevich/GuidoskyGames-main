@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MI Productos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="container">
+    <div id="instructions-dialog" class="modal dialog"> <!-- Se agregó la clase 'dialog' -->
+      <div class="modal-content">
+        <h3>Instrucciones</h3>
+        <p>¡Estás a punto de ganar un espectacular premio "Mi"! Solo tienes 3 oportunidades. ¡Mucha suerte!</p>
+        <button id="continue-instructions">Continuar</button>
+      </div>
+    </div>
+
+    <div id="code-dialog" style="display: none;"> <!-- Se agregó el atributo 'display: none;' -->
+      <label for="code">Ingresa el código para jugar:</label>
+      <input type="text" id="code" name="code">
+      <button onclick="verifyCode()">Jugar</button>
+    </div>
+
+    <div id="game" style="display: none;"> <!-- Se agregó el atributo 'display: none;' -->
+      <h1>Encuentra a "Mi Cannagar"</h1>
+      <div class="game-container">
+        <div id="game-board" class="game-board">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+      </div>
+      <div id="dialog" style="display: none;"></div>
+      <div id="score-board" class="score-board">Puntuación: <span id="score">0</span></div>
+      <div id="lives-board" class="lives-board">Vidas: <span id="lives">3</span></div>
+      <img id="success-image" src="images/acertaste.png" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);width: 500px; height: 300px;" />
+      <img id="fail-image" src="images/fallaste.png" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);width: 500px; height: 300px;" />
+      <img id="game-over-image" src="images/game_over.png" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);width: 500px; height: 300px;" />
+      <audio id="bg-music" autoplay loop>
+        <source src="sounds/fondo.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
