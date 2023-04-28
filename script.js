@@ -485,7 +485,7 @@ const continueInstructionsButton = document.getElementById('continue-instruction
 if (closeInstructionsButton) {
   closeInstructionsButton.addEventListener('click', () => {
     document.getElementById('instructions-dialog').style.display = 'none';
-    document.getElementById('code-dialog').style.display = 'block';
+    document.getElementById('code-dialog').style.display = 'none';
   });
 }
 if (continueInstructionsButton) {
